@@ -184,7 +184,7 @@ struct DispPar : public Worker {
     
     void operator() (std::size_t begin, std::size_t end) {
         for (std::size_t k = begin; k < end; k++) {
-            float temp = phitmp;
+            double temp = phitmp;
             for (std::size_t i = 0; i < N; i++){
                 double mutmp = exp(alpha(i) + psi(k) + beta(k) * theta(i));
                 temp += (wfm(i,k) - mutmp) * (wfm(i,k) - mutmp) / mutmp;
